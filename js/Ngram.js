@@ -54,8 +54,6 @@ class Ngram {
     limpiarNgram = (palabrasAceptadas) => {
         for(const [_, valor] of Object.entries(this.palabras)) {
             valor.palabrasContiguas = valor.palabrasContiguas.filter(p => palabrasAceptadas.includes(p));
-
-            if (valor.contenido === 'the') console.log(valor.palabrasContiguas)
         }
     }
 
@@ -78,7 +76,6 @@ class Ngram {
         }
 
         if (!palabrasAUsar.length) return '';
-        console.log(palabrasAUsar);
 
         let palabraActual = this.obtenerPalabraInicial(palabrasAUsar);
 
